@@ -1,17 +1,20 @@
 (function (root,factory){
   if (typeof define === 'function' && define.amd){
     define([
-      "react"
+      "react",
+      "jsx!components/views/Loginpage"
     ],factory)
   }else{
-    root.App = factory(root.React);
+    root.App = factory(root.React, root.Loginpage);
   }
-})(this, function (React){
+})(this, function (React, Loginpage){
 
   return  React.createClass({
     render: function () {
       return(
-      <div> test </div>
+      <div>
+        <loginpage/>
+      </div>
       )
     }
   })
